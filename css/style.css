@@ -69,6 +69,19 @@ h3{
     align-content: center;
     
 }
+.a{
+    float: left;
+    font-weight: 1000;
+    color: black;
+}
+.b{
+    float: right;
+    color: black;
+
+}
+.abc{
+    margin-bottom: 30px;
+}
 .logo{
     height:auto;
     width:320px;
@@ -79,6 +92,9 @@ h3{
 }
 .swiper-slide{
     width: 10px;
+}
+.xy{
+    color: #ececeb;
 }
 .clearfix:after{
     content: ".";
