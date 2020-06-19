@@ -87,7 +87,49 @@ h3{
 .abc{
     margin-bottom: 30px;
 }
+.accordion{
+    max-width: 400px;
+    
+}
+.accordion-item-header{
+    align-items: center;
+   min-height: 3.5rem;
+   line-height: 1.25rem;
+ position: relative;
+ align-items: center;
+ display: block;
+    cursor: pointer;
+}
+.accordion-item-header::after{
+    content: "";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.2s ease ease-in-out;
+}
 
+.accordion-item-header.active::after{
+    content: "\25BE";
+
+}
+.accordion-item-body {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5rem;
+  border-top: 1px solid;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-header.active + .accordion-item-body{
+      display: block;
+  }
+  .accordion__input {
+    display: none;
+  }
+  
+  .accordion__input:checked ~ .accordion-item-body {
+    display: block;
+  }
 .logo{
     height:auto;
     width:320px;
