@@ -108,7 +108,7 @@
 </head>
 <header>
     
-    <img src="https://drive.google.com/file/d/1li_MhXm3k-k9VV6oxuQcKCgJr2kTH0W1/view?usp=sharing" class="logo" alt="logo" >
+    <img src="images/wickret.png" class="logo" alt="logo" >
 </header>
 <body>
 <div class="main-content-header">
@@ -131,7 +131,7 @@
                     <img class="slider-image" src="images/1.png" align="left" >
                     </div>
                         <div class = "content">
-                        <br><br><br><br><br><br><h1 class="xy"><br><br>$4 457</h1><br>
+                        <br><br><br><br><h1 class="xy"><br>$4 457</h1><br>
                         <h3>Debit</h3>
                         </div>
                 </div>
@@ -142,7 +142,7 @@
                     <img class="slider-image" src="images/1.png" align="left" >
                     </div>
                         <div class = "content">
-                       <br><br> <br><br><br><br><h1 class="yz"><br><br>$4 457</h1><br>
+                        <br><br><br><br><h1 class="yz"><br>$4 457</h1><br>
                         <h3>Credit</h3>
                         </div>
                 </div>
@@ -152,6 +152,7 @@
     <br><br><section class="abc">
         <div class="accordion">
             <div class="accordion-item">
+                <input type="radio" name="example_accordion" id="section1" class="accordion__input">
                 <div class="accordion-item-header">
             <h3 class="a">stats</h3>
         <h3 class="b" >month</h3>
@@ -179,7 +180,22 @@
     </section>
 </div>
 
+<script>
+    const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {accordionItemHeader.classList.toggle("active");
+    const accordionItemBody = accordionItemHeader.nextElementSibling;
+    if(accordionItemHeader.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    }
+    else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+    
+  });
+});
+</script>
     <script src="swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
