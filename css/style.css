@@ -113,7 +113,7 @@ h3{
 
 }
 .accordion-item-body {
-    display: none;
+    
     max-height: 0;
     overflow: hidden;
     line-height: 1.5rem;
