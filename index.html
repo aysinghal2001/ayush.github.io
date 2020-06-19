@@ -7,12 +7,108 @@
 
         <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
         <meta name= "viewport" content="width=device-width, initial scale=1.0" charset="utf-8">
+        
     <title>Wickret</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Dinosaur', 'Length'],
+          ['Acrocanthosaurus (top-spined lizard)', 12.2],
+          ['Albertosaurus (Alberta lizard)', 9.1],
+          ['Allosaurus (other lizard)', 12.2],
+          ['Apatosaurus (deceptive lizard)', 22.9],
+          ['Archaeopteryx (ancient wing)', 0.9],
+          ['Argentinosaurus (Argentina lizard)', 36.6],
+          ['Baryonyx (heavy claws)', 9.1],
+          ['Brachiosaurus (arm lizard)', 30.5],
+          ['Ceratosaurus (horned lizard)', 6.1],
+          ['Coelophysis (hollow form)', 2.7],
+          ['Compsognathus (elegant jaw)', 0.9],
+          ['Deinonychus (terrible claw)', 2.7],
+          ['Diplodocus (double beam)', 27.1],
+          ['Dromicelomimus (emu mimic)', 3.4],
+          ['Gallimimus (fowl mimic)', 5.5],
+          ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+          ['Megalosaurus (big lizard)', 7.9],
+          ['Microvenator (small hunter)', 1.2],
+          ['Ornithomimus (bird mimic)', 4.6],
+          ['Oviraptor (egg robber)', 1.5],
+          ['Plateosaurus (flat lizard)', 7.9],
+          ['Sauronithoides (narrow-clawed lizard)', 2.0],
+          ['Seismosaurus (tremor lizard)', 45.7],
+          ['Spinosaurus (spiny lizard)', 12.2],
+          ['Supersaurus (super lizard)', 30.5],
+          ['Tyrannosaurus (tyrant lizard)', 15.2],
+          ['Ultrasaurus (ultra lizard)', 30.5],
+          ['Velociraptor (swift robber)', 1.8]]);
+
+        var options = {
+          legend: { position: 'none' },
+        };
+
+        var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+   
+    <script>
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainers", {
+            animationEnabled: true,
+            title:{
+                horizontalAlign: "left"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [
+                    { y: 60, label: "Transfers $2500" },
+                    { y: 35, label: "Axos $124" },
+                    { y: 20, label: "Supermarkets $1200" },
+                    { y: 3, label: "Fuels $1200"},
+                    { y: 29, label: "Other $1500"},
+                    { y: 6, label: "Spam"}
+                ]
+            }]
+        });
+        chart.render();
+        
+        }
+        </script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Task', 'Hours per Day'],
+              ['Transfers $2500',     11],
+              ['Axos $124',      2],
+              ['Supermarkets $1200',  2],
+              ['Fuels $1200', 2],
+              ['Other $1500',    7]
+            ]);
     
+            var options = {
+              pieHole: 0.8,
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+            chart.draw(data, options);
+          }
+        </script>
 </head>
 <header>
     
-    <img src="images/wickret.PNG" class="logo" alt="logo" >
+    <img src="images/wickret.png" class="logo" alt="logo" >
 </header>
 <body>
 <div class="main-content-header">
@@ -35,7 +131,7 @@
                     <img class="slider-image" src="images/1.png" align="left" >
                     </div>
                         <div class = "content">
-                        <br><br><br><h1>$4 457</h1><br>
+                        <br><br><br><br><h1 class="xy"><br>$4 457</h1><br>
                         <h3>Debit</h3>
                         </div>
                 </div>
@@ -46,14 +142,44 @@
                     <img class="slider-image" src="images/1.png" align="left" >
                     </div>
                         <div class = "content">
-                        <br><br><br><h1>$4 457</h1><br>
+                        <br><br><br><br><h1 class="yz"><br>$4 457</h1><br>
                         <h3>Credit</h3>
                         </div>
                 </div>
             </div>
         </div>
     </div>
+    <br><br><section class="abc">
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-item-header">
+            <h3 class="a">stats</h3>
+        <h3 class="b" >month</h3>
+                  </div>
+                  <br><br><div class="accordion-item-body">
+                    <h3 class="a">Income</h3>
+                    <h3 class="b" >+$7 344.33</h3>
+                   <br> <h3 class="a">Expense</h3>
+                    <h3 class="b" >-$4 132.77</h3>
+                    <br><br><h3 class="b" >$246</h3>
+                    <div id="chart_div"  style="width: 900px; height: 500px;"></div>
+                    <br><h2 class="a">August '18</h3>
+                    <h2 class="b" >$ 12 546</h3>
+                    <br>  <br>     <div id="chartContainers" style="height: 370px; width: 100%;"></div>
+                    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                    <br><h2 class="a">July '18</h3>
+                        <h2 class="b" >$ 13 936</h3>
+                        <br>  <br>         <div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+
+
+
+    </div>
+        
+    </section>
 </div>
+
+
     <script src="swiper.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
@@ -73,5 +199,6 @@
       },
     });
     </script>
+    
 </body>
 </html>
