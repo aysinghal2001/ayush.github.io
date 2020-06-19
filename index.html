@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="swiper.min.js">
+
+        <link href="https://fonts.googleapis.com/css?family=Flamenco&display=swap" rel="stylesheet">
+        <meta name= "viewport" content="width=device-width, initial scale=1.0" charset="utf-8">
+    <title>Wickret</title>
+    
+</head>
+<header>
+    
+    <img src="images/wickret.png" class="logo" alt="logo" >
+</header>
+<body>
+<div class="main-content-header">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <div class = "slider">
+                    <img class="slider-image" src="images/1.png" align="left" >
+                    </div>
+                        <div class = "content">
+                        <br><br><br><h1>$12 457</h1><br>
+                        <h3>All cards</h3>
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card2">
+                    <div class = "slider">
+                    <img class="slider-image" src="images/1.png" align="left" >
+                    </div>
+                        <div class = "content">
+                        <br><br><br><h1>$4 457</h1><br>
+                        <h3>Debit</h3>
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card3">
+                    <div class = "slider">
+                    <img class="slider-image" src="images/1.png" align="left" >
+                    </div>
+                        <div class = "content">
+                        <br><br><br><h1>$4 457</h1><br>
+                        <h3>Credit</h3>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 0,
+        depth: 50,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+    </script>
+</body>
+</html>
